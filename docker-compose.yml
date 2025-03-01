@@ -21,3 +21,11 @@ services:
     depends_on:
       - postgres
 
+  goserver:
+    image: goserver
+    environment:
+      HOST: 'postgres'
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
